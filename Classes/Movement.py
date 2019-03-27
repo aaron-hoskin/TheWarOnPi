@@ -29,12 +29,21 @@ class Movement: #The Movement Class for moving the robot; assign a variable to u
             self.stop() # Take a guess: it stops after that duration.
 
     def turn(self, rot, t=0, speed=100): #Experimental Turning Function based on my convoluted intuition of maths
-        if rot== 'l': #For rotation towards left from front aka, anticlockwise.
+        if rot== 'r': #For rotation towards left from front aka, anticlockwise.
             self.set(speed,speed,1,0) #0 == FORWARDS
-        elif rot== 'r': #For rotation towards right from front aka, clockwise.
+        elif rot== 'l': #For rotation towards right from front aka, clockwise.
             self.set(speed,speed,0,1) #0 == FORWARDS
         self.wait(t) #Now you see why I made a wait function ;D
-
+    """
+    def proTurn(self, aFromWall, xFromEnd, direction):
+		Vo = 100
+		Vi = 100/(1+((46*xFromEnd)/((xFromEnd)**2)*((aFromWall)**2))))
+		if direction = 'l':
+			self.set(Vi, Vo, 0, 0)
+		elif direction = 'r':
+			self.set(Vo, Vi, 0,0)
+    """
+    
     def forward(self, speed=50, t=0,direction = 0): #Basic Forwards movement; impossible to underestimate
         if direction != 0:
             dir1 = direction

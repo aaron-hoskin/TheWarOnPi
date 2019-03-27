@@ -1,4 +1,8 @@
 Whole Program requires RPi.GPIO:
-(included in Pi by default)
-test.py requires the keyboard module:
-sudo pip3 install keyboard
+pip3 install RPi.GPIO
+MovementTest1.py requires the keyboard module:
+pip3 install keyboard
+Ultrasound.py requires time module:
+-
+ps3keybinds.py  requires evdev
+AND LOADS MORE!
